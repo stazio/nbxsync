@@ -70,9 +70,7 @@ class ZabbixProblemTable(NetBoxTable):
         url = zabbixserver.url.rstrip('/')
 
         if int(value):
-            return format_html(
-                '<span class="badge text-bg-success">Yes</span>',
-            )
+            return '<span class="badge text-bg-success">Yes</span>'
 
         # If not ACKed:
         return format_html(
